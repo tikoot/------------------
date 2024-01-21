@@ -234,3 +234,67 @@ header {
 .card-link_wrapper svg{
     margin-top: 6px;
 }
+
+/* Partners */
+
+.partners{
+    background-color: #2b2b2b;
+    padding: 39px 0;
+}
+
+.partners-header{
+    font-size: 24px;
+    color: #f4f4f4;
+}
+
+.slides {
+    display: none;
+}
+
+.slides img {
+    display: block;
+    width: 100%;
+}
+
+
+.prev,
+.next {
+    cursor: pointer;
+    
+    top: 50%;
+    transform: translate(0, -50%);
+    width: auto;
+    padding: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 0 8px 8px 0;
+    background: rgba(173, 216, 230, 0.1);
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(173, 216, 230, 0.3);
+}
+
+.dots {
+    cursor: pointer;
+    height: 14px;
+    width: 14px;
+    margin: 0 4px;
+    background-color: rgba(173, 216, 230, 0.2);
+    backdrop-filter: blur(2px);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.active,
+.dots:hover {
+    background-color: rgba(173, 216, 230, 0.8);}

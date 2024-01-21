@@ -476,8 +476,92 @@
             </div>
           </div>
         </section>
+        <section class="partners">
+          <div class="content-inner">
+            <div>
+              <h1 class="partners-header">პროექტის პარტნიორები</h1>
+              <div class="slider-container">
+                <div class="slides">
+                  <img src="./assets/Asset 4_2x_edited.webp" alt="" />
+                  <img src="./assets/White horiz.webp" alt="" />
+                  <img
+                    src="./assets/93e8a3_ae4ade72135b4c7eaa531290232fe5aa~mv2.webp"
+                    alt=""
+                  />
+                </div>
+
+                <div class="slides">
+                  <img src="./assets/Tegeta logo geo.webp" alt="" />
+                  <img
+                    src="./assets/93e8a3_aca86c1c067d4f8585c3c2cb1b0a0178~mv2.webp"
+                    alt=""
+                  />
+                  <img src="./assets/MicrosoftTeams-image (9).webp" alt="" />
+                </div>
+
+                <div class="slides">
+                  <img src="./assets/UFC GEO PNG_edited.webp" alt="" />
+                </div>
+                <a class="prev" onclick="prevSlide()">&#10094;</a>
+                <a class="next" onclick="nextSlide()">&#10095;</a>
+
+                <!-- The dots/circles -->
+                <div class="dots-container">
+                  <span class="dots" onclick="currentSlide(1)"></span>
+                  <span class="dots" onclick="currentSlide(2)"></span>
+                  <span class="dots" onclick="currentSlide(3)"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
-    <script src="script.js"></script>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      // Next-previous control
+      function nextSlide() {
+        slideIndex++;
+        showSlides();
+        timer = _timer; // reset timer
+      }
+
+      function prevSlide() {
+        slideIndex--;
+        showSlides();
+        timer = _timer;
+      }
+
+      // Thumbnail image controlls
+      function currentSlide(n) {
+        slideIndex = n - 1;
+        showSlides();
+        timer = _timer;
+      }
+
+      function showSlides() {
+        let slides = document.querySelectorAll(".slides");
+        let dots = document.querySelectorAll(".dots");
+
+        if (slideIndex > slides.length - 1) slideIndex = 0;
+        if (slideIndex < 0) slideIndex = slides.length - 1;
+
+        // hide all slides
+        slides.forEach((slide) => {
+          slide.style.display = "none";
+        });
+
+        // show one slide base on index number
+        slides[slideIndex].style.display = "block";
+
+        dots.forEach((dot) => {
+          dot.classList.remove("active");
+        });
+
+        dots[slideIndex].classList.add("active");
+      }
+    </script>
   </body>
 </html>
