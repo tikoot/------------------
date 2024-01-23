@@ -353,7 +353,7 @@ input.tgg-title {
 .faq-accordion-content {
     overflow: hidden;
     max-height: 0;
-    transition: max-height .4s ease-in-out;
+    transition: max-height .0s ease-in-out;
     color: #f4f4f4;
 
 }
