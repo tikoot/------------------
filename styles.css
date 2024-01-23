@@ -127,7 +127,7 @@ header {
 
 .hero{
         background: url(./assets/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.webp) top center no-repeat;
-        background-size: auto;
+        background-size: cover;
         min-height: 371px;
         width:100%;
         display: flex;
@@ -158,16 +158,17 @@ header {
     padding-bottom:  63px ;
 }
 
-.hero-link {
+.hero-link , 
+.faq-link {
     color: #00aef3;
     font-size: 20px;
     transition: color 0.4s ease 0s;
     
 }
 
-.hero-link:hover {
+.hero-link:hover,
+.faq-link:hover {
     color: #dbdbdb;
-    font-size: 20px;
 }
 
 /* Courses */
@@ -300,11 +301,75 @@ header {
     background-color: rgba(173, 216, 230, 0.8);}
 
 
+/* FAQ */
+
+.faq{
+   background-color: #161616;
+   padding: 53px 0 40px 0;
+}
+
+.faq-header{
+    color: #F4F4F4;
+    font-size: 24px;
+   
+}
+.faq .intro{
+    padding-bottom: 50px;
+}
+
+
+.faq-accordion {
+            padding: 8px 0;
+            border-bottom: 1px solid hsl(240, 5%, 91%);
+            cursor: pointer;
+            min-width: 980px;
+        }
 
 
 
+ .answer-description{
+    padding: 40px 10px ;
+ }
 
+ .faq-accordion-title label {
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+    justify-content: space-between;
+    color: #F4F4F4;
+    padding: 20px 0;
+ }
 
+input.tgg-title {
+    appearance: unset;
+    all: unset;
+}
+
+.faq-accordion-title span {
+    margin-left: auto;
+    transition: transform .4s ease-in-out;
+}
+
+.faq-accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .4s ease-in-out;
+    color: #f4f4f4;
+
+}
+
+/* onclick "" */
+
+.faq-accordion .tgg-title:checked+div>label>span {
+    will-change: transform;
+    transform: rotate(180deg);
+}
+
+.faq-accordion .tgg-title:checked~.faq-accordion-content {
+    will-change: max-height;
+    max-height: 100%;
+    padding-bottom: 20px;
+}
 
 /* Footer */
 
