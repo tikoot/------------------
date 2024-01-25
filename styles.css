@@ -42,14 +42,22 @@ html {
 /* Header */
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     background-color: #1a1e1f;
     width: 100%;
     height: 100%;
     padding: 20px 48px;
-    /* mobailshi icvleba */
+    transition: background-color 0.3s ease;
 
 }
 
+.scrolled {
+    background-color: rgba(34, 34, 34, 0.95);
+}
+
+      
 
 .header-wrapper{
     display: flex;

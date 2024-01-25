@@ -1,15 +1,13 @@
-const items = document.querySelectorAll(".accordion button");
+document.addEventListener('DOMContentLoaded', () => {
 
-function toggleAccordion() {
-  const itemToggle = this.getAttribute('aria-expanded');
-  
-  for (i = 0; i < items.length; i++) {
-    items[i].setAttribute('aria-expanded', 'false');
-  }
-  
-  if (itemToggle == 'false') {
-    this.setAttribute('aria-expanded', 'true');
-  }
-}
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        const scrollPosition = window.scrollY;
 
-items.forEach(item => item.addEventListener('click', toggleAccordion));
+        if (scrollPosition > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+});
