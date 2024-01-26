@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+
+
     /* slider */
     
   const slidesContainers = Array.from(document.querySelectorAll(".slides"));
@@ -23,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function showSlide(index) {
     slidesContainers.forEach((container, i) => {
       if (i === index) {
-        container.style.display = "block";
+        container.style.display = "flex";
         container.classList.remove("fade-out");
         container.classList.add("fade-in");
       } else {
