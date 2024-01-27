@@ -11,8 +11,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    /* accordion */
 
+    document.addEventListener('change', function(event) {
+    const clickedCheckbox = event.target;
 
+    if (clickedCheckbox.classList.contains('tgg-title')) {
+      const checkboxes = document.querySelectorAll('.tgg-title');
+
+      checkboxes.forEach((checkbox) => {
+        if (checkbox !== clickedCheckbox) {
+          checkbox.checked = false; // Close other FAQs
+        }
+      });
+    }
+  });
+
+  
     /* slider */
     
   const slidesContainers = Array.from(document.querySelectorAll(".slides"));
