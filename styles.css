@@ -370,21 +370,21 @@ input.tgg-title {
     padding: 25px 0;
 }
 
+.footer_txt {
+    order: 1;
+    padding-top: 15px;
+   
+}
+
 .footer_txt-one{
     padding: 15px 0;
+    order: 2;
 }
 
 .footer_txt-one, 
 .footer_txt {
     color: #fff;
     font-size: 14px;
-}
-
-.footer-icons{
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        margin-bottom: 30px;
 }
 
 .facebook-logo{
@@ -407,6 +407,24 @@ input.tgg-title {
     border: 1px solid #000;
 
 }
+
+.desk-footer {
+    display: none;
+}
+.mobile-footer
+{
+        display: flex;
+            align-items: center;
+            width: 280px;
+            justify-content: space-between;
+            padding-top: 15px;
+}
+
+.footer-txt-wrap{
+    display: flex;
+    flex-direction: column;
+}
+
 
 @media only screen and (min-width: 1020px) {
     .content-inner {
@@ -529,4 +547,26 @@ input.tgg-title {
                 font-size: 20px;
         }
 
+                .desk-footer {
+                    display: block;
+                }
+                                .mobile-footer{
+                                    display: none;
+                                }
+.footer-icons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 30px;
+}
+
+.footer_txt {
+    order: 2;
+    padding-top: 0;
+
+}
+
+.footer_txt-one {
+    order: 1;
+}
 }
