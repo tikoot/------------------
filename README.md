@@ -28,12 +28,16 @@ TBCxUSAID - is a responsive page where user can see information about courses, i
 
 ## Setup
 
-# Clone the repository
+Clone the repository
 
+```sh
 git clone https://github.com/tikoot/------------------.git
+```
 
-# Navigate to the project directory
+Navigate to the project directory
 
+```sh
 cd your-project
+```
 
-# Open index.html in your browser
+Open index.html in your browser
