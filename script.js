@@ -11,6 +11,29 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    /* toggle navbar */
+
+      const hamburger = document.querySelector(".hamburger-menu");
+      const hamburgerWrap = document.querySelector(".hamburger-menu-wrap");
+       const navMobile = document.querySelector(".nav-mobile");
+       const navMobileWrap = document.querySelector(".nav-mobile-wrap");
+
+      hamburger.addEventListener("click", mobileMenu);
+
+      function mobileMenu() {
+        hamburger.classList.toggle("active");
+        navMobile.classList.toggle("active");
+         hamburgerWrap.classList.toggle("active");
+        navMobileWrap.classList.toggle("active");
+      }
+
+      function closeMenu() {
+        navMobile.classList.remove("active");
+         hamburgerWrap.classList.remove("active");
+        navMobileWrap.classList.remove("active");
+        hamburger.classList.remove("active");
+      }
+
     /* accordion */
 
     document.addEventListener('change', function(event) {
@@ -21,13 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       checkboxes.forEach((checkbox) => {
         if (checkbox !== clickedCheckbox) {
-          checkbox.checked = false; // Close other FAQs
+          checkbox.checked = false;
         }
       });
     }
   });
 
-  
+
     /* slider */
     
   const slidesContainers = Array.from(document.querySelectorAll(".slides"));
