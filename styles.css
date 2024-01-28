@@ -1,3 +1,29 @@
+
+@font-face {
+    font-family: 'Wfont';
+    src: url('./fonts/file\ \(9\).woff2') format('woff2');
+    
+}
+
+
+@font-face {
+    font-family: 'Wfont2';
+    src: url('./fonts/file\ \(10\).woff2') format('woff2');
+}
+
+
+@font-face {
+    font-family: 'Wfont3';
+    src: url('./fonts/file\ \(11\).woff2') format('woff2');
+}
+
+
+@font-face {
+    font-family: 'Wfont4';
+    src: url('./fonts/file\ \(12\).woff2') format('woff2');
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +37,9 @@ html {
     overflow-x: hidden;
 }
 
+body {
+    font-family: 'Wfont2', sans-serif;
+}
 
 .content-inner {
     margin: 0 auto;
@@ -38,6 +67,7 @@ header {
 }
 
 .nav-list {
+    font-family: 'Wfont2', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -173,6 +203,7 @@ header {
 
 
 .hero-title {
+    font-family: 'Wfont3', sans-serif;
     color: #f4f4f4;
     font-size: 24px;
 
@@ -184,6 +215,7 @@ header {
 }
 
 .hero-text {
+    font-family: 'Wfont4', sans-serif;
     color: #F4F4F4;
     font-size: 16px;
     padding-bottom: 63px;
@@ -193,6 +225,7 @@ header {
 .hero-link,
 .faq-link,
 .faq-link-mobile {
+    font-family: 'Wfont4', sans-serif;
     color: #00aef3;
     font-size: 20px;
     transition: color 0.4s ease 0s;
